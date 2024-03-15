@@ -1,0 +1,72 @@
+
+<div class="container">
+   <div class="bubble bubble-shadow"></div>
+   <div class="bubble bubble-origin"></div>
+  
+   <h1>Till we meet again</h1>
+  <div class="shadow shadow-1"></div>
+  <div class="shadow shadow-2"></div>
+  <div class="book-1"></div>
+  <div class="book-2"></div>
+  <div class="book-3"></div>
+  <div class="book-4"></div>
+  <div class="cup-hand"></div>
+  <div class="cup"></div>
+  <div class="cup-steam"></div>
+  <div class="cup-steam cup-steam_2"></div>  
+</div>
+<div class="leave leave-1"></div>
+<div class="leave leave-2"></div>
+<div class="leave leave-3"></div>
+<div class="leave leave-4"></div> 
+
+
+<div class="container">
+            <div class="shadow"></div>
+            <div class="cat">
+                <div class="ear"></div>
+                <div class="eye"></div>
+                <div class="mouth"></div>
+                <div class="nose"></div>
+                <div class="tail"></div>
+                <div class="body"></div>
+                <div class="bubble"></div>
+            </div>
+        </div>
+
+
+
+
+
+<p id="demo"></p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Mar 22, 2024 15:30:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
